@@ -12,3 +12,10 @@ based on. We forecast the motion over this latency and gate the beam on the fore
   horizon from irregularly timed frames; five independently initialized members form an ensemble.
 - **Conformal gating.** The ensemble spread scales a split-conformal margin around the forecast
   target; the beam is enabled only if the dilated forecast stays within the treatment boundary.
+
+    ├── common.py  data.py  flows.py  metrics.py
+    ├── motion_wm.py          # model + training
+    ├── evaluate_motion.py    # baselines, forecasts, gating quantities
+    ├── results.py            # statistics, conformal calibration, gating
+    ├── splits.json  mwm_full_scans.json
+    └── models.py  train_head.py  evaluate.py  analyze.py   # DINOv3 baseline
